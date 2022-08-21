@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;1,8..144,200&display=swap" rel="stylesheet">
+    <style>
+        body{
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Serif', serif;
+}
+.login{
+    height: 420px;
+    width: 300px;
+    position: absolute;
+    top: 120px;
+    left: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(8, 8, 8, 0.329);
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.log{
+    text-align: center;
+    font-weight: 700;
+    color: #564a5f;
+    position: absolute;
+    top: 20px;
+    left: 110px;
+}
+.inp{
+    height: 30px;
+    width: 265px;
+    background-color: rgba(236, 215, 245, 0.342);
+    border: 10px;
+    border-color: #1a1212;
+    border-radius: 5px;
+    font-family: 'Roboto Serif', serif;
+}
+.otp{
+    height: 30px;
+    width: 80px;
+    background-color: rgba(236, 215, 245, 0.342);
+    border: 10px;
+    border-color: #1a1212;
+    border-radius: 5px;
+    font-family: 'Roboto Serif', serif;
+}
+.logbutt{
+    background-color: #1197cc;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms,box-shadw 200ms;
+    height: 35px;
+    width: 100px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.logbutt:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+.otpbutt{
+    background-color: #1197cc;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms,box-shadw 200ms;
+    height: 35px;
+    width: 100px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.otpbutt:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+.loguser{
+    position: absolute;
+    top: 120px;
+    left: 15px;
+}
+.logorg{
+    position: absolute;
+    top: 180px;
+    left: 15px;
+}
+.logpwd{
+    position: absolute;
+    top: 240px;
+    left: 15px;
+}
+.otpbutt{
+    position: absolute;
+   top: 300px;
+    left: 90px;
+}
+
+    </style>
+    
+    <title>Online Voting</title>
+</head>
+<body>
+    <div class="login">
+        <form  name="onlinevoting" action="otpsend.jsp"  >
+            <div class="log"><h1>Login</h1></div>
+            <div class="loguser">
+                <input type="text" name="user" placeholder="Username*" required class="inp">
+            </div>
+            <div class="logorg">
+                <input type="text" name="orgid" placeholder="Org Id*" required class="inp">
+            </div>
+            <div class="logpwd">
+                <input type="password" name="pwd" placeholder="Password*" required class="inp">
+            </div >
+            <div class="blogotp">
+                <button class="otpbutt" type="submit">Send OTP</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

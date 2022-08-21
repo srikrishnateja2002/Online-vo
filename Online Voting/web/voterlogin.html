@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>voter login</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,200;1,8..144,200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="D:\html\idp\voterlogin.css">
+        <script>
+            function emailvalidation(){
+    var mail=document.adminlogin.email.value;
+    var email=/^\w+([\.-]?\w+)*@\w*(\.\w{2,3})$/;
+    if(mail.match(email))
+    {
+        return true;
+    }
+    else  
+    {   
+        alert('E-mail is Wrong...!');
+        return false; 
+    }
+}
+function passwordvalidation(){
+    var password= /^(?=.*\d)(?=.*[$@&#!])(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    var pass=document.adminlogin.pwd.value;
+    if(pass.match(password)){
+        return true;
+    } 
+    else  
+    {   
+        alert('password is Wrong...!'); 
+        return false;  
+    }
+} 
+function samepassword(){
+    var pass=document.adminlogin.pwd.value;
+    var cpass=document.adminlogin.cpwd.value;
+    if(pass!=cpass){
+        alert('confirm password is Wrong...!');
+        return false; 
+    }
+    else{
+        return true;
+    }
+}  
+function adminsign(){
+    if(emailvalidation() && passwordvalidation() && samepassword()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function passwordvalidation1(){
+    var password= /^(?=.*\d)(?=.*[$@&#!])(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+    var pass=document.adminlogin1.pwd.value;
+    if(pass.match(password)){
+        return true;
+    } 
+    else  
+    {   
+        alert('password is Wrong...!'); 
+        return false;  
+    }
+}
+        </script>
+
+        <style>
+body{
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: 'Roboto Serif', serif;
+}
+.login{
+    height: 390px;
+    width: 290px;
+    position: absolute;
+    top: 150px;
+    left: 190px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(8, 8, 8, 0.329);
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.log{
+    font-family: 'Roboto Serif', serif;
+    text-align: center;
+    font-weight: 700;
+    color: #564a5f;
+}
+.inp{
+    height: 30px;
+    width: 270px;
+    background-color: rgba(236, 215, 245, 0.342);
+    border: 10px;
+    border-color: #1a1212;
+    border-radius: 5px;
+    font-family: 'Roboto Serif', serif;
+}
+button{
+    background-color: #1197cc;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms,box-shadw 200ms;
+    height: 35px;
+    width: 100px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+button:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+}
+.loguser{
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+.logorg{
+    position: absolute;
+    top: 180px;
+    left: 10px;
+}
+.logpwd{
+    position: absolute;
+    top: 240px;
+    left: 10px;
+}
+.logbutt{
+    position: absolute;
+    top: 300px;
+    left: 90px;
+}
+.signup{
+    height: 525px;
+    width: 350px;
+    position: absolute;
+    top: 70px;
+    left: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 8px 32px 0 rgba(8, 8, 8, 0.329);
+    border-left: 1px solid rgba(255, 255, 255, 0.24);
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.signtxt{
+    font-family: 'Roboto Serif', serif;
+    text-align: center;
+    font-weight: 700;
+    color: #564a5f;
+    position: absolute;
+    top: 0px;
+    left: 90px
+}
+.signname{
+    position: absolute;
+    top:85px;
+    left:35px;
+}
+.signuser{
+    position: absolute;
+    top:135px;
+    left:35px;
+}
+.signemail{
+    position: absolute;
+    top:185px;
+    left:35px;
+}
+.signgender{
+    position: absolute;
+    top:235px;
+    left:35px;
+    margin-right: 50px;
+}
+.signorg{
+    position: absolute;
+    top:285px;
+    left:35px;
+}
+.signph{
+    position: absolute;
+    top:335px;
+    left:35px;
+}
+.signpwd{
+    position: absolute;
+    top:385px;
+    left:35px;
+}
+.signpwdc{
+    position: absolute;
+    top:435px;
+    left:35px;
+}
+.signbutt{
+    position: absolute;
+    top:480px;
+    left:120px;
+}
+hr{
+    height: 300px;
+    width: 0px;
+    position: absolute;
+    top: 150px;
+    left: 650px;
+    color: #564a5f;
+}
+.logtext{
+    position: absolute;
+    top: 125px;
+    left: 235px;
+    font-weight: 600;
+    color: #4a5f55;
+}
+.signtext{
+    position: absolute;
+    top: 45px;
+    left: 860px;
+    font-weight: 600;
+    color: #4a5f55;
+}
+        </style>
+    </head>
+    <body>
+        <div class="logtext">If your already Registrated</div>
+        <div class="login">
+        <form  name="voterlogin"  action="Voterlogin" onsubmit="return passwordvalidation()" method="POST" >
+            <div class="log"><h1>Login</h1></div>
+            <div class="loguser">
+                <input type="text" name="user" placeholder="Username*" class="inp" required>
+            </div>
+            <div class="logorg">
+                <input type="text" name="orgid" placeholder="Organition Id*" class="inp" required>
+            </div>
+            <div class="logpwd">
+                <input type="password" name="pwd" placeholder="Password*" class="inp" required>
+            </div>
+            <div>
+                <button class="logbutt" type="submit">Login</button>
+            </div>
+        </form>
+        </div>
+        <hr>
+        <div class="signtext">If your new, Please Registrated</div>
+        <div class="signup">
+            <form name="voterlogin"  action="Votersignup" onsubmit="return votersign();" method="POST">
+                <div class="signtxt"><h1>Registration</h1></div>
+                <div class="signname"><input type="text" name="name" placeholder="Name*" class="inp" required></div>
+                <div class="signuser"><input type="text" name="user" placeholder="Username*" class="inp" required></div>
+                <div class="signemail"><input type="email" name="email" placeholder="E-mail*" class="inp" required></div>
+                <div class="signgender">
+                    <label class="radio"><input type="radio" value="Male" name="gender" />Male</label>
+                    <label class="radio"><input type="radio" value="Female" name="gender"/>Female</label>
+                </div>
+                <div class="signorg"><input type="text" name="orgid" placeholder="Organition Id*" class="inp" required></div>
+                <div class="signph"><input type="text" name="phone" placeholder="Phone Number*"  class="inp" required></div>
+                <div class="signpwd"><input type="password" name="pwd" placeholder="Password*" class="inp" required></div>
+                <div class="signpwdc"><input type="password" name="cpwd" placeholder="Re-enter Password*" class="inp" required></div>
+                <div class="signbutt"><button type="submit">Sign up</button></div>
+            </form>
+        </div>
+    </body>
+</html>
